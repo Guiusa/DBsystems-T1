@@ -1,5 +1,5 @@
 select 
-    distinct(NATION.N_NAME), count(*) as total
+    distinct(NATION.N_NAME), sum(LINEITEM.L_QUANTITY) as total
 from
     LINEITEM
 join 
