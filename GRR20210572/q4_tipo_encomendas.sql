@@ -1,1 +1,5 @@
-select distinct(O_ORDERSTATUS) from ORDERS ;
+select 
+    distinct(O_ORDERSTATUS) 
+from 
+    ORDERS 
+;

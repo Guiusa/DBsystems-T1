@@ -1,1 +1,5 @@
-select P_TYPE from PART;
+select 
+    distinct(P_TYPE )
+from 
+    PART
+;

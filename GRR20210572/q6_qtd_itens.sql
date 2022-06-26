@@ -1,21 +1,21 @@
 select 
-    distinct(NATION.N_NAME), sum(LINEITEM.L_QUANTITY) as total
+    distinct(N_NAME), sum(L_QUANTITY) as total
 from
     LINEITEM
 join 
     ORDERS
 on
-    LINEITEM.L_ORDERKEY = ORDERS.O_ORDERKEY
+    L_ORDERKEY = O_ORDERKEY
 join
     CUSTOMER 
 on 
-    ORDERS.O_CUSTKEY = CUSTOMER.C_CUSTKEY
+    O_CUSTKEY = C_CUSTKEY
 join
     NATION
 on
-    CUSTOMER.C_NATIONKEY = NATION.N_NATIONKEY
+    C_NATIONKEY = N_NATIONKEY
 group by
-    NATION.N_NAME
+    N_NAME
 order by
     total DESC limit 10
 ;
